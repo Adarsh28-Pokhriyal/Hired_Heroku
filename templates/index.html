@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hired or Not?</title>
+</head>
+
+<body>
+	<h1>Make Predictions</h1>
+	<form action="{{ url_for('predict')}}" method="post">
+		<input type="text" name="Experience" placeholder="Experience" required="required" />
+        		<input type="text" name="employed" placeholder="Employed" required="required" />
+		<input type="text" name="prev" placeholder="Previous Employer" required="required" />
+		<input type="text" name="education" placeholder="Level of Education" required="required" />
+        		<input type="text" name="school" placeholder="Top-Tier School" required="required" />
+		<input type="text" name="interned" placeholder="Interned" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+	</form>
+
+	 <br>
+   <br>
+   {{ prediction_text }}
+</body>
+</html>
